@@ -20,8 +20,8 @@ const Header = (props) => {
 
     <Carousel.Caption>
     <button class="btn btn-lg btn-primary btn-block" type="submit" onClick={() => history.push("/Registro")}>Iniciar Sesión</button>
-    <button class="btn btn-lg btn-primary btn-block" type="submit" onClick={() => history.push("/Reistro2")}>Registrarse</button>
-    <button class="btn btn-lg btn-block" type="submit" onClick={() => history.push("/")}><img class="mb-4" src="./logo1...png" alt="" width="50" height="50"/></button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" onClick={() => history.push("/Registro2")}>Registrarse</button>
+    <button class="btn btn-lg btn-block" type="submit" onClick={() => history.push("/Registroadmi")}><img class="mb-4" src="./logo1...png" alt="" width="50" height="50"/></button>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
