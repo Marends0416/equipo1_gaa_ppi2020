@@ -1,17 +1,17 @@
 const express= require('express');
 const app = express(); 
-// definir todos los componentes, modulos app
-const routes= require('./routes/Usuario');// crud
-const modulos = require('./routes/material');// crud
-const colegios = require('./routes/ruta_ambiental');// crud
-const colegios = require('./routes/Navegar');// crud
-const colegios = require('./routes/consejo');// crud
-const colegios = require('./routes/Pregunta');// crud
-const colegios = require('./routes/Pregunta_logro');// crud
-const colegios = require('./routes/logro');// crud
+// definir todos los componentes app
+const Usuario= require('./routes/Usuario');// crud
+const material = require('./routes/material');// crud
+const ruta_ambiental = require('./routes/ruta_ambiental');// crud
+const Navegar = require('./routes/Navegar');// crud
+const consejo = require('./routes/consejo');// crud
+const Pregunta = require('./routes/Pregunta');// crud
+const Pregunta_logro = require('./routes/Pregunta_logro');// crud
+const logro = require('./routes/logro');// crud
 //modificar const 
 //ajustes
-app.set('port',3000) 
+app.set('port',3306) 
 // Middleware
 app.use(express.json()); 
 // ajustess
@@ -27,4 +27,3 @@ app.use('/api/logro',logro);
 app.listen(app.get('port'),()=> {
     console.log(`Servidor corriendo en el puerto ${app.get('port')}`);
     });
-
