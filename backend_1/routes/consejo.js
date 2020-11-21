@@ -16,7 +16,7 @@ mysqlConnection.query('SELECT * FROM consejo', (err,rows,fields)=>{
 
 router.get('/consejo/id:', (req, res) => {
 const {id}= req.params;
-mysqlConnection.query('SELECT * FROM consejo WERE id= ?', [id], (err,rows,fields)=>{
+mysqlConnection.query('SELECT * FROM consejo WHERE id= ?', [id], (err,rows,fields)=>{
     if(!err){
         res.json(rows[0]);
     } else {
