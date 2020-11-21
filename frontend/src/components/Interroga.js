@@ -13,7 +13,7 @@ const Interroga = (props) => {
   <ListGroup.Item>Gana puntos en la ruta ambiental</ListGroup.Item>
   <ListGroup.Item variant="primary">La ruta ambiental es la evaluación de la app</ListGroup.Item>
   <ListGroup.Item variant="secondary">Aprende consejos dando click en "Categorías"</ListGroup.Item>
-  <ListGroup.Item variant="success">Pon el practica los consejos aprendidos</ListGroup.Item>
+  <ListGroup.Item variant="success">Pon en práctica los consejos aprendidos</ListGroup.Item>
   <ListGroup.Item variant="danger">Presta mucha atención a lo que lees para luego responder las preguntas de la ruta ambiental</ListGroup.Item>
   <ListGroup.Item variant="warning">Aprende a reciclar en las descripciones de cada material</ListGroup.Item>
   <ListGroup.Item variant="info">Consulta tu proceso en la barra de menu dando click en "Logros"</ListGroup.Item>

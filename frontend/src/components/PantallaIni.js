@@ -27,7 +27,7 @@ const PantallaIni = (props) => {
 <div>
 <Container className="text-center" >
 <form className="form-signin">
-<button class="btn btn-lg btn-light btn-block" type="submit" onClick={() => history.push("/Consejos")}><h1 class="h3 mb-3 font-weight-normal">Categorias</h1>
+<button class="btn btn-lg btn-light btn-block" type="submit" onClick={() => history.push("/Consejos")}><h1 class="h3 mb-3 font-weight-normal">Categorías</h1>
 <img class="mb-4" src="./gos.png" alt="" width="200" height="150"/></button> 
 
 <br/>

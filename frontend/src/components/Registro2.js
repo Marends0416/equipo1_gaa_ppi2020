@@ -13,7 +13,7 @@ const Registro2 = (props) => {
   <h1 class="h3 mb-3 font-weight-normal">Por favor, registrese</h1>
   <label for="inputEmail" class="sr-only">Nombre de usuario</label>
   <input type="username" id="inputEmail" class="form-control" placeholder="Nombre de usuario" required=""/>
-  <label for="inputEmail" class="sr-only">Correo electronico</label>
+  <label for="inputEmail" class="sr-only">Correo electrónico</label>
   <input type="email" id="inputEmail" class="form-control" placeholder="Correo electronico" required=""/>
   <label for="inputPassword" class="sr-only">contraseña</label>
   <input type="inputpassword" id="inputPassword" class="form-control" placeholder="Contraseña" required=""/>
@@ -25,7 +25,7 @@ const Registro2 = (props) => {
     </label>
   </div>
   <button class="btn btn-lg btn-primary btn-block" type="submit" onClick={() => history.push("/PantallaIni")}>Crear cuenta</button>
-  <p class="mt-5 mb-3 text-muted">¿Ya tienes cuenta? <br/> <button class="btn btn-lg " type="submit" onClick={() => history.push("/Registro")}><h6>Haz click aqui para iniciar sesión</h6></button></p>
+  <p class="mt-5 mb-3 text-muted">¿Ya tienes cuenta? <br/> <button class="btn btn-lg " type="submit" onClick={() => history.push("/Registro")}><h6>Haz click aquí para iniciar sesión</h6></button></p>
   
 </form>
 </Container>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Form} from 'react-bootstrap';
+import { Navbar, Form, FormControl, InputGroup} from 'react-bootstrap';
 import '../style/Epregunta.css'
 import { withRouter } from "react-router-dom";
 
@@ -32,14 +32,34 @@ const Epregunta = (props) => {
 <br/>
   <Form.Control type="text" placeholder="Pregunta" />
   <br/>
+  
   <Form.Label>Respuesta</Form.Label>
   <br/>
-    <Form.Control as="select" custom>
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-    </Form.Control>
+
+  <InputGroup className="mb-3">
+    <InputGroup.Prepend>
+      <InputGroup.Checkbox aria-label="Checkbox for following text input" />
+    </InputGroup.Prepend>
+    <FormControl aria-label="Text input with checkbox" />
+  </InputGroup>
+  <InputGroup className="mb-3">
+    <InputGroup.Prepend>
+      <InputGroup.Radio aria-label="Radio button for following text input" />
+    </InputGroup.Prepend>
+    <FormControl aria-label="Text input with radio button" />
+  </InputGroup>
+  <InputGroup className="mb-3">
+    <InputGroup.Prepend>
+      <InputGroup.Checkbox aria-label="Checkbox for following text input" />
+    </InputGroup.Prepend>
+    <FormControl aria-label="Text input with checkbox" />
+  </InputGroup>
+  <InputGroup>
+    <InputGroup.Prepend>
+      <InputGroup.Radio aria-label="Radio button for following text input" />
+    </InputGroup.Prepend>
+    <FormControl aria-label="Text input with radio button" />
+  </InputGroup>
     <br/>
     <br/>
   <Form.Control as="select">

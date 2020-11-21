@@ -34,7 +34,7 @@ const Header = (props) => {
 
     <Carousel.Caption>
     
-      <h3>Aprende consejos para reducir la contaminacion.</h3>
+      <h3>Aprende consejos para reducir la contaminación.</h3>
     </Carousel.Caption>
     
   </Carousel.Item>

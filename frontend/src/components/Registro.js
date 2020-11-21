@@ -22,7 +22,7 @@ const Registro = (props) => {
     </label>
   </div>
   <button class="btn btn-lg btn-primary btn-block" type="submit" onClick={() => history.push("/PantallaIni")}>Entrar</button>
-  <p class="mt-5 mb-3 text-muted">¿No tienes una cuenta?<br/><button class="btn btn-lg " type="submit" onClick={() => history.push("/Registro2")}><h6>Haz click aqui para crear una cuenta</h6></button></p>
+  <p class="mt-5 mb-3 text-muted">¿No tienes una cuenta?<br/><button class="btn btn-lg " type="submit" onClick={() => history.push("/Registro2")}><h6>Haz click aquí para crear una cuenta</h6></button></p>
   
 </form>
 </Container>
