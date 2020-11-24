@@ -25,6 +25,7 @@ import  Consejos3Admi from "../components/Consejos3Admi"
 import  PreguntasAdmi from "../components/PreguntasAdmi"
 import  RutaAdmi from "../components/RutaAdmi"
 import  ResultadoAdmi from "../components/ResultadoAdmi"
+import  ConsejoJson from "../components/ConsejoJson"
 
 export default function Ppicontainer() {
   return (
@@ -55,6 +56,7 @@ export default function Ppicontainer() {
   <Route exact path="/PreguntasAdmi" component={ PreguntasAdmi} />
   <Route exact path="/RutaAdmi" component={ RutaAdmi} />
   <Route exact path="/ResultadoAdmi" component={ ResultadoAdmi} />
+  <Route exact path="/ConsejoJson" component={ ConsejoJson} />
     </BrowserRouter>
          
     </div>
