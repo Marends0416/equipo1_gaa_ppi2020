@@ -16,7 +16,7 @@ mysqlConnection.query('SELECT * FROM material', (err,rows,fields)=>{
 
 router.get('/material/id:', (req, res) => {
 const {id}= req.params;
-mysqlConnection.query('SELECT * FROM material WERE id= ?', [id], (err,rows,fields)=>{
+mysqlConnection.query('SELECT * FROM material WHERE id= ?', [id], (err,rows,fields)=>{
     if(!err){
         res.json(rows[0]);
     } else {
@@ -47,7 +47,7 @@ router.post("/nuevo-material", (req, res) => {
 router.put("/material/:id", (req, res) => {
     const { categoria, nombre, imagen } = req.body;
     const {id} = req.params;
-    mysqlConnection.query('UPDATE material set categoria=?,nombre=?,imagen=? WERE id=?',
+    mysqlConnection.query('UPDATE material set categoria=?,nombre=?,imagen=? WHERE id=?',
     [categoria, nombre, imagen, id],(err, rows, fields)=>{
         if(err){
             res.json({status:'categoria' +categoria + 'actualizado'})
@@ -61,7 +61,7 @@ router.put("/material/:id", (req, res) => {
 
     router.delete("/material/:id", (req, res) => {
         const {id} = req.params;
-        mysqlConnection.query('DELETE FROM material WERE id=?',
+        mysqlConnection.query('DELETE FROM material WHERE id=?',
         [id],(err, rows, fields)=>{
             if(err){
                 res.json({status:'material eliminado'})

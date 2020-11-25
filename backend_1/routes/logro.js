@@ -16,7 +16,7 @@ mysqlConnection.query('SELECT * FROM logro', (err,rows,fields)=>{
 
 router.get('/logro/id:', (req, res) => {
 const {id}= req.params;
-mysqlConnection.query('SELECT * FROM logro WERE id= ?', [id], (err,rows,fields)=>{
+mysqlConnection.query('SELECT * FROM logro WHERE id= ?', [id], (err,rows,fields)=>{
     if(!err){
         res.json(rows[0]);
     } else {
@@ -47,7 +47,7 @@ router.post("/nuevo-logro", (req, res) => {
 router.put("/logro/:id", (req, res) => {
     const { titulo, lista, imagen } = req.body;
     const {id} = req.params;
-    mysqlConnection.query('UPDATE logro set titulo=?,lista=?,imagen=? WERE id=?',
+    mysqlConnection.query('UPDATE logro set titulo=?,lista=?,imagen=? WHERE id=?',
     [titulo, lista, imagen, id],(err, rows, fields)=>{
         if(err){
             res.json({status:'titulo' +titulo + 'actualizado'})
@@ -61,7 +61,7 @@ router.put("/logro/:id", (req, res) => {
 
     router.delete("/logro/:id", (req, res) => {
         const {id} = req.params;
-        mysqlConnection.query('DELETE FROM logro WERE id=?',
+        mysqlConnection.query('DELETE FROM logro WHERE id=?',
         [id],(err, rows, fields)=>{
             if(err){
                 res.json({status:'logro eliminado'})
