@@ -16,7 +16,7 @@ mysqlConnection.query('SELECT * FROM Usuario', (err,rows,fields)=>{
 
 router.get('/Usuario/id:', (req, res) => {
 const {id}= req.params;
-mysqlConnection.query('SELECT * FROM Usuario WERE id= ?', [id], (err,rows,fields)=>{
+mysqlConnection.query('SELECT * FROM Usuario WHERE id= ?', [id], (err,rows,fields)=>{
     if(!err){
         res.json(rows[0]);
     } else {
@@ -47,7 +47,7 @@ router.post("/nuevo-Usuario", (req, res) => {
 router.put("/Usuario/:id", (req, res) => {
     const { nombre, contraseña, correo } = req.body;
     const {id} = req.params;
-    mysqlConnection.query('UPDATE Usuario set nombre=?,contraseña=?,correo=? WERE id=?',
+    mysqlConnection.query('UPDATE Usuario set nombre=?,contraseña=?,correo=? WHERE id=?',
     [nombre, contraseña, correo, id],(err, rows, fields)=>{
         if(err){
             res.json({status:'nombre' +nombre + 'actualizado'})
@@ -61,7 +61,7 @@ router.put("/Usuario/:id", (req, res) => {
 
     router.delete("/Usuario/:id", (req, res) => {
         const {id} = req.params;
-        mysqlConnection.query('DELETE FROM Usuario WERE id=?',
+        mysqlConnection.query('DELETE FROM Usuario WHERE id=?',
         [id],(err, rows, fields)=>{
             if(err){
                 res.json({status:'Usuario eliminado'})

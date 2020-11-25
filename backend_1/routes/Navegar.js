@@ -16,7 +16,7 @@ mysqlConnection.query('SELECT * FROM Navegar', (err,rows,fields)=>{
 
 router.get('/Navegar/id:', (req, res) => {
 const {id}= req.params;
-mysqlConnection.query('SELECT * FROM Navegar WERE id= ?', [id], (err,rows,fields)=>{
+mysqlConnection.query('SELECT * FROM Navegar WHERE id= ?', [id], (err,rows,fields)=>{
     if(!err){
         res.json(rows[0]);
     } else {
@@ -47,7 +47,7 @@ router.post("/nuevo-Navegar", (req, res) => {
 router.put("/Navegar/:id", (req, res) => {
     const { id_Usuario, id_material, id_ruta_ambiental } = req.body;
     const id = req.params.id;
-    mysqlConnection.query('UPDATE Navegar set id_Usuario=?,id_material=?,id_ruta_ambiental=? WERE id=?',
+    mysqlConnection.query('UPDATE Navegar set id_Usuario=?,id_material=?,id_ruta_ambiental=? WHERE id=?',
     [id_Usuario, id_material, id_ruta_ambiental, id],(err, rows, fields)=>{
         if(err){
             res.json({status:'id_Usuario' +id_Usuario + 'actualizado'})

@@ -16,7 +16,7 @@ mysqlConnection.query('SELECT * FROM ruta_ambiental', (err,rows,fields)=>{
 
 router.get('/ruta_ambiental/id:', (req, res) => {
 const {id}= req.params;
-mysqlConnection.query('SELECT * FROM ruta_ambiental WERE id= ?', [id], (err,rows,fields)=>{
+mysqlConnection.query('SELECT * FROM ruta_ambiental WHERE id= ?', [id], (err,rows,fields)=>{
     if(!err){
         res.json(rows[0]);
     } else {
@@ -47,7 +47,7 @@ router.post("/nuevo-ruta_ambiental", (req, res) => {
 router.put("/ruta_ambiental/:id", (req, res) => {
     const { titulo, imagen, descripcion } = req.body;
     const id = req.params.id;
-    mysqlConnection.query('UPDATE ruta_ambiental set titulo=?,imagen=?,descripcion=? WERE id=?',
+    mysqlConnection.query('UPDATE ruta_ambiental set titulo=?,imagen=?,descripcion=? WHERE id=?',
     [titulo, imagen, descripcion, id],(err, rows, fields)=>{
         if(err){
             res.json({status:'titulo' +titulo + 'actualizado'})

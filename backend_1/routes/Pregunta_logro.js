@@ -16,7 +16,7 @@ mysqlConnection.query('SELECT * FROM Pregunta_logro', (err,rows,fields)=>{
 
 router.get('/Pregunta_logro/id:', (req, res) => {
 const {id}= req.params;
-mysqlConnection.query('SELECT * FROM Pregunta_logro WERE id= ?', [id], (err,rows,fields)=>{
+mysqlConnection.query('SELECT * FROM Pregunta_logro WHERE id= ?', [id], (err,rows,fields)=>{
     if(!err){
         res.json(rows[0]);
     } else {
@@ -47,7 +47,7 @@ router.post("/nueva-Pregunta_logro", (req, res) => {
 router.put("/Pregunta_logro/:id", (req, res) => {
     const { codigoL_logro, puntuacion} = req.body;
     const {id} = req.params;
-    mysqlConnection.query('UPDATE Pregunta_logro set codigoL_logro=?,puntuacion=?,WERE id=?',
+    mysqlConnection.query('UPDATE Pregunta_logro set codigoL_logro=?,puntuacion=?,WHERE id=?',
     [codigoL_logro, puntuacion, id],(err, rows, fields)=>{
         if(err){
             res.json({status:'codigoL_logro' +codigoL_logro + 'actualizado'})
@@ -61,7 +61,7 @@ router.put("/Pregunta_logro/:id", (req, res) => {
 
     router.delete("/Pregunta_logro/:id", (req, res) => {
         const {id} = req.params;
-        mysqlConnection.query('DELETE FROM Pregunta_logro WERE id=?',
+        mysqlConnection.query('DELETE FROM Pregunta_logro WHERE id=?',
         [id],(err, rows, fields)=>{
             if(err){
                 res.json({status:'Pregunta_logro eliminado'})

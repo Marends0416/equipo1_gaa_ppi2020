@@ -16,7 +16,7 @@ mysqlConnection.query('SELECT * FROM Pregunta', (err,rows,fields)=>{
 
 router.get('/Pregunta/id:', (req, res) => {
 const {id}= req.params;
-mysqlConnection.query('SELECT * FROM Pregunta WERE id= ?', [id], (err,rows,fields)=>{
+mysqlConnection.query('SELECT * FROM Pregunta WHERE id= ?', [id], (err,rows,fields)=>{
     if(!err){
         res.json(rows[0]);
     } else {
@@ -47,7 +47,7 @@ router.post("/nueva-Pregunta", (req, res) => {
 router.put("/Pregunta/:id", (req, res) => {
     const { titulo, imagen} = req.body;
     const {id} = req.params;
-    mysqlConnection.query('UPDATE Pregunta set titulo=?,imagen=?,WERE id=?',
+    mysqlConnection.query('UPDATE Pregunta set titulo=?,imagen=?,WHERE id=?',
     [titulo, imagen, id],(err, rows, fields)=>{
         if(err){
             res.json({status:'titulo' +titulo + 'actualizado'})
@@ -61,7 +61,7 @@ router.put("/Pregunta/:id", (req, res) => {
 
     router.delete("/Pregunta/:id", (req, res) => {
         const {id} = req.params;
-        mysqlConnection.query('DELETE FROM Pregunta WERE id=?',
+        mysqlConnection.query('DELETE FROM Pregunta WHERE id=?',
         [id],(err, rows, fields)=>{
             if(err){
                 res.json({status:'Pregunta eliminado'})
