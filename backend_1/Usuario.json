@@ -1,0 +1,16 @@
+{
+    "Usuario": [
+      {
+        "id": 1,
+        "nombre": "Marends",
+        "contraseña": "QWEQWE",
+        "correo": "maren@.gmail.co"
+      },
+      {
+        "id": 2,
+        "nombre": "Snei04",
+        "contraseña": "QWEQWE",
+        "correo": "sneide@.co.co"
+      }
+    ]
+  }

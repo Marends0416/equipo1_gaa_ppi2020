@@ -1,0 +1,18 @@
+{
+    "Preguntas": [
+        {
+          "id": "59779",
+          "titulo": "China Blue",
+          "imagen": "http://dummyimage.com/145x141.png/5fa2dd/ffffff",
+          "descripción": "turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit",
+          "respuesta": 1
+        },
+        {
+          "id": "43742",
+          "titulo": "Fiesta II: Segundos descuidados",
+          "imagen": "http://dummyimage.com/111x146.png/5fa2dd/ffffff",
+          "descripción": "nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo",
+          "respuesta": 2
+        }
+    ]
+}

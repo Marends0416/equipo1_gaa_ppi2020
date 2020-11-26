@@ -1,5 +1,5 @@
 import React from 'react'
-import {CardGroup, Card, Button, Navbar, Form, FormControl}from'react-bootstrap'
+import {CardGroup, Card, Button, Navbar, Form, FormControl} from'react-bootstrap'
 import { withRouter } from "react-router-dom";
 
 const Consejos = (props) => {

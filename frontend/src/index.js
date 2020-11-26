@@ -1,13 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
-import Ppicontainer from "./containers/Ppicontainer";
-
-const rootElement = document.getElementById("root");
+import Usuario from './Usuario';
+import Consejos2 from './Consejos2';
+import Preguntas from './Preguntas';
+import * as serviceWorker from './serviceWorker';
+import 'bootstrap/dist/css/bootstrap.min.css';
 ReactDOM.render(
   
-    <Ppicontainer />,
+  <div>
+  <Usuario />
+  <Consejos2 />
+  <Preguntas />
+   </div>
  
-  rootElement
-);
+  , document.getElementById('root'));
 
+serviceWorker.unregister();
